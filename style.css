@@ -62,9 +62,23 @@ button, input, textarea{
 }
 
 button{
-    background:#23633d;
+    background:#237544;
     color:white;
     cursor: pointer;
+    transition:background-color 0.15s, transform 0.15s;
+}
+
+button:hover:not(:disabled){
+    background:#42885e;
+}
+
+button:active:not(:disabled){
+    transform: scale(0.98);
+}
+
+button:disabled{
+    background: #8b5cb8;
+    cursor: not-allowed;
 }
 input, textarea{
     width:100%;
@@ -116,3 +130,33 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+nav > a {
+    text-decoration: none;
+    
+}
+
+form input:focus, form textarea:focus{
+    border-color: #3fa3a0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media(max-width:600px){
+    header,main, footer{
+        padding: 16px;
+
+    }
+    nav{
+        flex-wrap: wrap;
+        gap:8px;
+    }
+    button[type="submit"]{
+        width: 100%;
+    }
+
+}
+
