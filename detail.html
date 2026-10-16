@@ -5,7 +5,9 @@
        <title>상세페이지</title>
        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <script defer src="js/data.js"></script>
+        <script defer src="js/data.js"></script>
+        <script defer src="js/render.js"></script>
+        <script defer src="js/detail.js"></script>
     </head>
     <body>
         <header>
@@ -20,21 +22,20 @@
         </header>
         <main>
             <article>
-                <h1 id="post-title">첫 번째 게시글</h1>
-                <p id="post-meta" class="meta">학생/2026-10-14</p>
-                <p id="post-comment">게시판 실습 내용입니다</p>
+                <h1 id="post-title"></h1>
+                <p id="post-meta" class="meta"></p>
+                <p id="post-content"></p>
             </article>
             <a href="index.html">목록으로</a>
             <section id="comments-section">
                 <h2>댓글</h2>
                 <!-- 댓글 목록 영역 -->
                 <ul id="comment-list">
-                    <li>댓글입니다.</li>
-                    <li>댓글입니다.</li>
+                  
                 </ul>
                 <!-- 댓글 입력창 -->
                 <form id="comment-form">
-                    <lable>댓글 내용</lable>
+                    <label>댓글 내용</label>
                     <textarea id="comment-content" name="content" required></textarea>
                     <button type="submit">댓글 등록</button>
                 </form>
