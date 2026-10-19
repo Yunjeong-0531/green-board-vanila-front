@@ -19,6 +19,9 @@ function renderPosts(posts){
 
 function renderComments(comments){
     const list = document.querySelector("#comment-list");
+
+    list.replaceChildren();
+
     if(comments.length===0){
         list.textContent = "아직 댓글이 없습니다.";
 
@@ -39,7 +42,7 @@ function renderComments(comments){
 
 function renderPost(post){
     document.querySelector("#post-title").textContent = post.title;
-    document.querySelector("#post-meta").textContent = `${post.author}|${post.createdDatetime}`;
+    document.querySelector("#post-meta").textContent = `${post.author} | ${post.createdDatetime}`;
     document.querySelector("#post-content").textContent = post.content;
 
 
