@@ -2,6 +2,10 @@
 
 
 
+//로그인 체크 
+requireLogin();
+
+
 const form = document.querySelector("#post-form");
 
 form.addEventListener("submit", function(event){
@@ -15,9 +19,6 @@ form.addEventListener("submit", function(event){
         return;   
     }
 
-
-
-
     posts.push({
         id: getPostNextId(),
         title: title,
@@ -25,6 +26,7 @@ form.addEventListener("submit", function(event){
         author : "실습 사용자",
         createdDatetime : new Date().toString().slice(0,10)
     })
+
     saveLocal();
     location.href="index.html"
 })
