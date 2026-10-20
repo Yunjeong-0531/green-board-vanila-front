@@ -69,7 +69,7 @@ button{
 }
 
 button:hover:not(:disabled){
-    background:#42885e;
+    background:#729680;
 }
 
 button:active:not(:disabled){
@@ -77,7 +77,8 @@ button:active:not(:disabled){
 }
 
 button:disabled{
-    background: #8b5cb8;
+    background: #d8ebe0;
+    color: black;
     cursor: not-allowed;
 }
 input, textarea{
@@ -160,3 +161,81 @@ a:hover {
 
 }
 
+article {
+    position: relative;
+}
+
+#menu-toggle {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#menu-toggle[hidden] {
+    display: none;
+}
+
+.menu-box {
+    position: absolute;
+    top: 25px;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    padding: 5px;
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+
+.menu-box[hidden] {
+    display: none;
+}
+
+.menu-box button {
+    color: #243b2d;
+    padding: 8px;
+    border: none;
+    background: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu-box button:hover {
+    background: #f2f2f2;
+}
+
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .comment-menu-btn {
+  margin-left: auto; /* 남는 공간을 왼쪽에 몰아줘서 버튼이 우측 끝으로 감 */
+  background: none;
+  border: none;
+  cursor: pointer;
+/* } */
+
+
+.comment-menu-btn {
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-menu-btn,
+.comment-menu-btn:hover:not(:disabled),
+.comment-menu-btn:active:not(:disabled) {
+  all: unset;
+  margin-left: auto;
+  cursor: pointer;
+}

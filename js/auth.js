@@ -1,3 +1,6 @@
+
+
+
 //현재 로그인 여부 조회
 function isLoggedIn(){
     return Boolean(localStorage.getItem("accessToken"));
@@ -11,6 +14,29 @@ function requireLogin(){
     location.replace("login.html");
     return false;
 }
+
+
+document.querySelector(".logout-button").addEventListener("click", logout);
+
+
+async function logout(){
+    try{
+
+        const response = await apiRequest("/user/logout","POST");
+   
+        console.log(response);  
+        localStorage.removeItem("accessToken")
+        location.replace("login.html")
+  
+    } catch(error){
+        console.log(error);
+    }
+}
+
+
+
+
+
 //Authorization Header 생성
 function getAuthHeaders(){
     const accessToken = localStorage.getItem("accessToken");
